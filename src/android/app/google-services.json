@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "478976111293",
+    "firebase_url": "https://caterina-1e602.firebaseio.com",
+    "project_id": "caterina-1e602",
+    "storage_bucket": "caterina-1e602.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478976111293:android:055f9408ca13192ed5bdd4",
+        "android_client_info": {
+          "package_name": "com.singlevoid.caterina"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478976111293-ka4p5lt4msbntlkf01m1ugvmitgi9bm9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUBnHrqvCOJ9Losx28kqzkwof-RKvNe8g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478976111293-ka4p5lt4msbntlkf01m1ugvmitgi9bm9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

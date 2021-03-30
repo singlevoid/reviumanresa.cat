@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Reviu Manresa</string>
+    <string name="empty_title">Título desconocido</string>
+    <string name="empty_author">Autor desconocido</string>
+    <string name="download">Descargar</string>
+    <string name="fullscreen">Ampliar imagen</string>
+    <string name="title_dashboard">Explorar</string>
+    <string name="title_notifications">Fotografias</string>
+    <string name="share">Compartir</string>
+    <string name="empty_image_description">Sin descripción de la imagen</string>
+    <string name="empty_source">Fuente desconocida</string>
+    <string name="empty_date">Fecha desconocida</string>
+    <string name="title_home">Cerca</string>
+    <string name="distance">" %1$d m"</string>
+    <string name="open_browser">Abrir en el navegador</string>
+    <string name="empty_distance">Distancia desconocida</string>
+    <string name="explore">Mostrar en el mapa</string>
+    <string name="loading_photographs">Cargando fotografias</string>
+    <string name="empty_tag">Etiqueta desconocida</string>
+    <string name="near_permission">Location permission must be allowed to show you photographs near you</string>
+    <string name="distance_menu">Distancia</string>
+    <string name="near_empty">No hay fotografias a menos de %1$d metros de tu ubicación</string>
+    <string name="title_settings">Ajustes</string>
+    <string name="theme_settings">Escojer tema</string>
+    <string name="settings_theme_default">Por defecto del sistema</string>
+    <string name="settings_theme_dark">Oscuro</string>
+    <string name="settings_theme_light">Claro</string>
+    <string name="allow">Permitir</string>
+    <string name="apply_filter">Aplicar filtro</string>
+    <string name="filters">Filtros</string>
+    <string name="location">Ubicación</string>
+    <string name="filter_default_geolocalized">Todos</string>
+    <string name="filter_only_geolocalized">Solo localizados</string>
+    <string name="filter_only_non_localized">No localizados</string>
+    <string name="description_back">Volver a los filtros</string>
+    <string name="sort">Ordenar</string>
+    <string name="tags">Etiquetas</string>
+    <string name="reset">Restablecer</string>
+    <string name="authors">Autores</string>
+    <string name="search_hint">Buscar…</string>
+    <string name="filter_mode">Modo</string>
+    <string name="close">Cerrar</string>
+
+    <plurals name="location">
+        <item quantity="one">Ubicación</item>
+        <item quantity="other">%d Ubicación</item>
+    </plurals>
+
+    <plurals name="tags">
+        <item quantity="one">Etiquetas</item>
+        <item quantity="other">%d Etiquetas</item>
+    </plurals>
+
+    <plurals name="authors">
+        <item quantity="one">Autores</item>
+        <item quantity="other">%d Autores</item>
+    </plurals>
+
+    <string name="match_all">Coinciden todos</string>
+    <string name="match_any">Coincide alguno</string>
+
+</resources>

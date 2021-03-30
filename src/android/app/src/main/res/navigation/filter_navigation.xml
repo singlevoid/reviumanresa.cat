@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/navigation_filters"
+    tools:ignore="InvalidNavigation">
+    <fragment
+        android:id="@+id/navigation_filters"
+        android:name="com.singlevoid.caterina.ui.filters.FiltersFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_filters">
+        <action
+            android:id="@+id/action_navigation_filters_to_navigation_filters_location"
+            app:destination="@id/navigation_filters_location"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_filters"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navigation_filters_to_navigation_filters_sort"
+            app:destination="@id/navigation_filters_sort"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_filters"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navigation_filters_to_navigation_filters_tags"
+            app:destination="@id/navigation_filters_tags"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_filters"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navigation_filters_to_navigation_filters_authors"
+            app:destination="@id/navigation_filters_authors" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_filters_sort"
+        android:name="com.singlevoid.caterina.ui.filters.sort.FilterSortFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/filter_sort">
+        <action
+            android:id="@+id/action_navigation_filters_location_to_navigation_filters"
+            app:destination="@id/navigation_filters"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_collection"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_filters_tags"
+        android:name="com.singlevoid.caterina.ui.filters.tags.FilterTagFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/filter_sort">
+        <action
+            android:id="@+id/action_navigation_filters_tags_to_navigation_filters"
+            app:destination="@id/navigation_filters"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_filters"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_filters_authors"
+        android:name="com.singlevoid.caterina.ui.filters.authors.FilterAuthorFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/filter_sort">
+        <action
+            android:id="@+id/action_navigation_filters_authors_to_navigation_filters"
+            app:destination="@id/navigation_filters"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_filters"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_filters_location"
+        android:name="com.singlevoid.caterina.ui.filters.location.FilterLocationFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/filter_location">
+        <action
+            android:id="@+id/action_navigation_filters_location_to_navigation_filters"
+            app:destination="@id/navigation_filters"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_filters"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
