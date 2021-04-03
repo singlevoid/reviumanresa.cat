@@ -19,8 +19,8 @@ android {
         applicationId "com.singlevoid.caterina"
         minSdkVersion 24
         targetSdkVersion 30
-        versionCode 3
-        versionName "1.0.1"
+        versionCode 5
+        versionName "1.1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         Properties properties = new Properties()
