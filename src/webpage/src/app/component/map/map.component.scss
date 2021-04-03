@@ -1,0 +1,17 @@
+agm-map {
+  height: 94vh;
+}
+
+div.marker-thumbnail{
+  display: flex;
+  background-color: #202020;
+  position: absolute;
+  box-shadow: 1em 1em 2em 0px rgba(0,0,0,0.8);
+  transition: .3s ease;
+  top: 0;
+  left: 0;
+}
+
+div.marker-thumbnail img{
+  height: 25em;
+}

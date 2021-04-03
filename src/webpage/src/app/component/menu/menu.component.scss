@@ -1,0 +1,79 @@
+/** Copyright [2020] [Joan Albert Espinosa Muns]
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+
+$primaryColor: #8656bd;
+$transparent: #00000000;
+
+.navbar{
+  background-color: #101010;
+  border-bottom: 0.2em solid $primaryColor;
+  justify-content: center;
+  text-align: center;
+}
+
+.navbar-toggler{
+  border: 0;
+}
+
+.navbar-toggler:hover{
+  background-color: transparent;
+  border: 0;
+}
+
+.navbar-toggler:focus{
+  border: transparent;
+}
+
+.navbar-toggler-icon{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(132,86,189, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-brand{
+  color: $primaryColor;
+}
+
+.nav-link{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14pt;
+  transition: all 0.5s;
+}
+
+.nav-link:hover{
+  color: $primaryColor;
+}
+
+img#app-icon{
+  width: 1em;
+  margin-right: 0.1em;
+}
+
+#brand-name{
+  font-size: 16pt;
+  color: $primaryColor;
+  text-transform: uppercase;
+  font-weight: Bold;
+  text-align: center;
+  padding-left: 0.5em;
+}
+
+#brand-city{
+  font-size: 16pt;
+  color:white;
+  text-transform: uppercase;
+}
+
+

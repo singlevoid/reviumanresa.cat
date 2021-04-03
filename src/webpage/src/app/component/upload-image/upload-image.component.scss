@@ -1,0 +1,53 @@
+.upload-image{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #202020;
+  width: 100%;
+}
+
+.thumbnail-image{
+  width: 300px;
+  margin: auto;
+}
+
+button{
+  width: 20%;
+  margin: auto;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 50% 50% ;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "high low";
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 3em;
+  width: 100%;
+}
+
+.high-quality, .low-quality{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.high-quality{
+  grid-area: high;
+}
+
+.low-quality{
+  grid-area: low;
+}
+
+h5{
+  margin: 0.5em;
+}

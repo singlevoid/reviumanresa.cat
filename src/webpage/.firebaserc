@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "caterina-1e602": {
+      "hosting": {
+        "reviu": [
+          "caterina-1e602"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "caterina": "caterina-1e602"
+  }
+}

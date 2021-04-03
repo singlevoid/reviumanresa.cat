@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="row tags-container">
+
+    <div class="row" *ngFor="let tag of getTags()">
+
+      <app-tag-card c [tag]="tag"></app-tag-card>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,15 @@
+
+<div class="card col"  [routerLink]="['/author', Id()]">
+
+  <img class="card-img-top thumbnail-image" [src]="ThumbnailImage()">
+  <img class="card-img-top thumbnail-author" [src]="AuthorImage()">
+
+  <div class="card-body">
+
+    <h4 class="card-title">{{Name()}}</h4>
+
+    <h6 class="card-title primary-color" i18n>{{getNumberOfPhotographs()}} photographs</h6>
+
+  </div>
+
+</div>

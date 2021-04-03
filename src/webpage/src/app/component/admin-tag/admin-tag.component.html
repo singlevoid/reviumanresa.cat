@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <app-upload-image [lowQualitySource]="getTagLowQuality()" [highQualitySource]="getTagHighQuality()"></app-upload-image>
+
+  <mat-tab-group>
+    <mat-tab label="English">
+      <app-basic-form #englishForm ></app-basic-form>
+  </mat-tab>
+    <mat-tab label="Spanish">
+      <app-basic-form #spanishForm ></app-basic-form>
+  </mat-tab>
+    <mat-tab label="Catalan">
+      <app-basic-form #catalanForm ></app-basic-form>
+    </mat-tab>
+  </mat-tab-group>
+
+  <button i18n (click)="upload()">Upload</button>
+</div>

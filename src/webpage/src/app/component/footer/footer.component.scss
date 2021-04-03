@@ -1,0 +1,46 @@
+div#footer{
+  display: grid;
+  grid-template-columns: 15% 22% 22% 22% 15%;
+  grid-template-areas: ". app repo license .";
+  background-color: #101010;
+  padding-top: 5em;
+  padding-bottom: 4em
+}
+
+div#footer h5{
+  text-transform: uppercase;
+  text-align: center;
+}
+
+div#footer p{
+  font-size: 11pt;
+  color: #ccc;
+  text-align: center;
+}
+
+div#app{
+  grid-area: app;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+div#repository{
+  grid-area: repo;
+}
+
+div#license{
+  grid-area: license;
+}
+
+div.repo-card{
+  background-color: #202020;
+}
+
+img#play-button{
+  width: 10em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

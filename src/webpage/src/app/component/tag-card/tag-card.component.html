@@ -1,0 +1,15 @@
+
+<div class="card col"  [routerLink]="['/collection', getId()]">
+
+  <img class="card-img-top thumbnail-image" [src]="getImage()">
+
+  <div class="card-body">
+
+    <h4 class="card-title">{{getName()}}</h4>
+
+    <h6 class="card-title primary-color" i18n>{{getNumberOfPhotographs()}} photographs</h6>
+
+    <p class="card-text">{{getDescription()}}</p>
+  </div>
+
+</div>

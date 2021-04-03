@@ -1,0 +1,160 @@
+$background-color: #101010;
+
+@font-face {
+  font-family: roshida;
+  src: url(assets/font/LT-Feelgood.ttf) format('truetype');
+}
+
+button{
+  background-color: #6936a3;
+  padding: 0.6em;
+  font-size: 12pt;
+  outline: none;
+  border: 0;
+  margin: 1em;
+  border-radius: 0.2em;
+  text-transform: uppercase;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: #7545ac;
+}
+
+
+body{
+  background-color: $background-color;
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+  color: #d2c9ba;
+  text-decoration: none;
+}
+
+* {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #d2c9ba;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #202020;
+  background: #202020;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6936a3;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #202020;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+input[type=text]:focus{
+  outline: none;
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #202020;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+
+label{
+  margin-top: 1em;
+}
+
+
+input[type="text"] {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 100%;
+  font-size: 14pt;
+  border: 0;
+  text-align: center;
+  color: white;
+  outline: none;
+  border-bottom: 1px solid white;
+  background-color: #00000000;
+}
+
+input[type="number"] {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 80%;
+  font-size: 14pt;
+  border: 0;
+  text-align: center;
+  color: white;
+  outline: none;
+  border-bottom: 1px solid white;
+  background-color: #00000000;
+}
+
+
+.mat-tab-label{
+  width: 100%;
+  background-color: #202020;
+  font-size: 14pt;
+  text-align: center;
+}
+
+
+.mat-tab-group{
+  width: 80%;
+  margin: auto;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.input-container{
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #202020;
+  width: 80%;
+  box-shadow: 0.2em 0.2em 0.5em 0px rgba(0,0,0,0.6);
+}
+
+
+.input-container-title{
+  background-color: #1A1A1A;
+  width: 100%;
+  padding: 0.7em;
+  text-align: center;
+  color:#797979;
+  font-size: 16pt;
+  margin-bottom: 1em;
+}

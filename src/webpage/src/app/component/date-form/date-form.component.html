@@ -1,0 +1,11 @@
+<div class="field-container" [formGroup]="getForm()">
+  <input type="checkbox" (click)="clicked()" [checked]="isExact"><label  class="animated" i18n>Is exact</label>
+
+  <label for="start" *ngIf="!isExact" i18n>Start</label>
+  <input id="start" type="number" formControlName="start">
+
+  <div class="field-container" [hidden]="isExact">
+      <label for="end" i18n>End</label>
+      <input id="end" type="number" formControlName="end">
+  </div>
+</div>

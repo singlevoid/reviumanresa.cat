@@ -1,0 +1,62 @@
+<!-- Copyright [2020] [Joan Albert Espinosa Muns]
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+-->
+
+
+<div *ngIf="getPhotograph()">
+
+  <div class="admin" *ngIf="isUserAdmin()">
+    <span class="material-icons" [routerLink]="['/admin','photo', ID()]">create</span>
+  </div>
+
+  <div class="photograph">
+    <img [src]="imgSource()">
+    <h5 *ngIf="!getLicense()" i18n>This image may be subject to Copyright</h5>
+  </div>
+
+  <div class="jumbotron photograph-info  text-center">
+
+    <h1>{{title()}}</h1>
+
+    <div class="icon-field-container">
+      <div class="icon-field">
+        <span class="material-icons">account_box</span>
+        <h4 *ngIf="!getAuthorName()" i18n>Unknown author</h4>
+        <h4 class="clickable" *ngIf="getAuthorName()" [routerLink]="['/author', getAuthorId()]"> {{getAuthorName()}}</h4>
+    </div>
+
+    <div class="icon-field">
+      <span class="material-icons">date_range</span>
+          <h4 *ngIf="!isDated()" i18n>Unknown date</h4>
+          <h4 *ngIf="isDated()">{{this.yearDate()}}</h4>
+    </div>
+
+    <div class="icon-field">
+      <span class="material-icons">source</span>
+          <h4 *ngIf="!getSourceName()" i18n>Unknown source</h4>
+          <h4 *ngIf="getSourceName()">{{getSourceName()}}</h4>
+    </div>
+
+    <p>{{getPhotograph().getDescription()}}</p>
+
+    <div class="tag-container">
+      <div *ngFor="let tag of tags()" class="tag" [routerLink]="['/collection', tag.getId()]">
+          <p class=".align-middle">{{tag.getName()}}</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

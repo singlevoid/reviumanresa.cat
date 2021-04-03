@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="ba121e95bc7a1dd9602ea201a2f6ffeff8d0ed0b" datatype="html">
+        <source>The Images of Manresa in your hand</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/home/home.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="107e4689b6cc0aeee8bbd9cc7cce9f8f1f22bd46" datatype="html">
+        <source>Download the free app for Android and come alive again the moments that shaped Manresa. Explore the city and it&apos;s history, See the moments that are near you and find all the stories.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/home/home.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="adaafb269738738f1ca8c73f8cb6ca476aa99688" datatype="html">
+        <source>Get the app</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/footer/footer.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="749788ff1ce28f82ebff27fc28458f95a122a42a" datatype="html">
+        <source>Download the free app for Android and come alive again the moments that shaped Manresa. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/footer/footer.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="92eee6be6de0b11c924e3ab27db30257159c0a7c" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/menu/menu.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d2a2915d79ff31439a174fc3a147004542291e29" datatype="html">
+        <source>Map</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/menu/menu.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0af1538b04a61b9693f7c787fc9281bdb9ef47fa" datatype="html">
+        <source>Photographs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/menu/menu.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/author-detail/author-detail.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d14d93e7ed17daa7a6b4238a3413056df11e1acb" datatype="html">
+        <source>Collections</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/menu/menu.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2d030866819ebcfb842d514ea23e9356338f2bd8" datatype="html">
+        <source>This image may be subject to Copyright</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-detail/photograph-detail.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d900b850cc6584818f8d7a1f279fbe6a9963eba6" datatype="html">
+        <source>Unknown author</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-detail/photograph-detail.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="93b94ee26cbb49892ad01f226af5f1cba03f76ee" datatype="html">
+        <source>Unknown date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-detail/photograph-detail.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4b3972c3e9485218508a95f7a4ce7758e3f09ced" datatype="html">
+        <source>Upload</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/admin-tag/admin-tag.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cff1428d10d59d14e45edec3c735a27b5482db59" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/admin-tag/tag-form.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eec715de352a6b114713b30b640d319fa78207a0" datatype="html">
+        <source>Description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/admin-tag/tag-form.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8483c321e3561f453d14b07f6d6e68201360fc10" datatype="html">
+        <source>Author:<x id="INTERPOLATION" equiv-text="{{getAuthor()}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-card/photograph-card.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="00cf3d5ae5ae1b4969579deb6c62b5f54cbcea11" datatype="html">
+        <source>Load image from local file</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/upload-image/upload-image.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">load image button</note>
+      </trans-unit>
+      <trans-unit id="efabb19a601b1ff202865b84268d94cf915ccebf" datatype="html">
+        <source>High Quality Image</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/upload-image/upload-image.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="71c359e69298c128ba46357f81448d49db0dd047" datatype="html">
+        <source>Low Quality Image</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/upload-image/upload-image.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="968ae420637cbca0cdd4b2a8aea0fc6a2fcd275f" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{getNumberOfPhotographs()}}"/> photographs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/tag-card/tag-card.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

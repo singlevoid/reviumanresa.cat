@@ -1,0 +1,43 @@
+{
+  "hosting": [
+    {
+      "target": "reviu",
+      "public": "dist/reviu",
+      "ignore": [
+        "**/.*"
+      ],
+      "headers": [
+        {
+          "source": "*.[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].+(css|js)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public,max-age=31536000,immutable"
+            }
+          ]
+        }
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/en/index.html"
+        },
+        {
+          "source": "/en/**",
+          "destination": "/en/index.html"
+        },
+        {
+          "source": "/es/**",
+          "destination": "/es/index.html"
+        },
+        {
+          "source": "/ca/**",
+          "destination": "/ca/index.html"
+        }
+      ],
+      "i18n":{
+        "root": "/"
+      }
+    }
+  ]
+}

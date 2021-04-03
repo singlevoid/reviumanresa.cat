@@ -1,0 +1,100 @@
+
+
+<app-loading *ngIf="uploading"></app-loading>
+
+<div class="admin-photograph" [formGroup]="GlobalForm()">
+  <div class="input-container image">
+    <h2 class="input-container-title" i18n>Photograph</h2>
+    <app-upload-image [lowQualitySource]="getTagLowQuality()" [highQualitySource]="getTagHighQuality()"></app-upload-image>
+  </div>
+
+    <mat-tab-group>
+      <h2 class="input-container-title" i18n>Description</h2>
+      <mat-tab label="English">
+        <app-basic-form #englishForm ></app-basic-form>
+    </mat-tab>
+      <mat-tab label="Spanish">
+        <app-basic-form #spanishForm ></app-basic-form>
+    </mat-tab>
+      <mat-tab label="Catalan">
+        <app-basic-form #catalanForm ></app-basic-form>
+      </mat-tab>
+    </mat-tab-group>
+
+
+  <div class="input-container date">
+    <h2 class="input-container-title"i18n>Date</h2>
+    <div class="date-container">
+      <div class="field-container">
+        <h4 i18n>Year</h4>
+        <app-date-form #yearForm></app-date-form>
+      </div>
+      <div class="field-container">
+        <h4 i18n>Month</h4>
+        <app-date-form #monthForm></app-date-form>
+      </div>
+      <div class="field-container">
+        <h4 i18n>Day</h4>
+        <app-date-form #dayForm></app-date-form>
+      </div>
+  </div>
+  </div>
+
+
+  <div class="input-container author">
+    <h2 class="input-container-title"i18n>Author</h2>
+      <select id="authors" formControlName="author">
+        <option [value]="null" i18n>Unknown</option>
+        <option *ngFor="let author of Authors()" [value]="author.getId()">{{author.getName()}}</option>
+      </select>
+  </div>
+
+
+  <div class="input-container source">
+    <h2 class="input-container-title" i18n>Source</h2>
+
+    <select id="sources" formControlName="source">
+      <option [value]="null" i18n>Unknown</option>
+      <option *ngFor="let source of Sources()" [value]="source.getId()">{{source.getName()}}</option>
+    </select>
+
+  </div>
+
+
+  <div class="input-container tags">
+    <h2 class="input-container-title" i18n>Collections</h2>
+
+    <div class="tag-container">
+      <div class="tag" *ngFor="let tag of Tags()">
+        <input type="checkbox" id="tag + {{tag.getName()}}" (change)="addTag(tag)" [checked]="tag.selected"><label  class="animated" for="tag + {{tag.getName()}}">{{tag.getName()}}</label>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="input-container map">
+    <h2 class="input-container-title" i18n>Map</h2>
+
+    <label>Latitude</label>
+    <input type="number" formControlName="latitude">
+    <label>Longitude</label>
+    <input type="number" formControlName="longitude">
+    <agm-map [latitude]="map.lat" [longitude]="map.lng" [styles]="map.styles" [zoom]="map.zoom" (mapClick)="mapClick($event)">
+
+        <agm-marker
+          *ngIf="Marker()"
+          [latitude]="Marker().lat"
+          [longitude]="Marker().lng"
+          [iconUrl]="'assets/marker.png'">
+        </agm-marker>
+
+    </agm-map>
+  </div>
+
+  <button i18n (click)="upload()">Upload</button>
+
+
+
+</div>
+

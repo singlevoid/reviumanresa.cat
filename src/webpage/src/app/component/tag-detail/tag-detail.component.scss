@@ -1,0 +1,69 @@
+.tag{
+  background-color: #303030;
+  text-align: center;
+}
+
+
+.tag-info{
+  padding: 1em;
+  padding-top: 3em;
+  text-align: center;
+  margin-bottom: 5em;
+}
+
+
+h1{
+  margin: 0;
+}
+
+
+
+.container{
+  background-color: #303030;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+div.docs-container{
+  margin: auto;
+  width: 100%;
+}
+
+div.document-container{
+  display:inline-block;
+  overflow: hidden;
+  background-color: transparent;
+  padding: 0.3em;
+  perspective: 100em;
+  width: 100%;
+  cursor: pointer;
+}
+
+div.show-more {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 3em;
+}
+
+div.show-more span{
+  font-size: 40pt;
+}
+
+
+@media only screen and (min-width: 800px){
+
+  div.document-container{
+    width: 50%;
+  }
+}
+
+
+@media only screen and (min-width: 1200px){
+
+  div.document-container{
+    width: 20%;
+  }
+}

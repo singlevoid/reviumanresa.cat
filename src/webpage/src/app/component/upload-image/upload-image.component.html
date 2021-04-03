@@ -1,0 +1,23 @@
+<div class="upload-image">
+
+  <div class="grid-container">
+
+    <div *ngIf="getHighQualitySource()" class="high-quality">
+      <h3 i18n>High Quality Image</h3>
+      <img #highQualityImage class="thumbnail-image" [src]="getHighQualitySource()" (load)="calculateHighImageSize()">
+      <h5 *ngIf="getLowQualitySource()">{{getHighImageSize()}}</h5>
+      <h5 *ngIf="getLowQualitySource()">{{getHighFileSize()}}</h5>
+    </div>
+
+    <div *ngIf="getLowQualitySource()" class="low-quality">
+      <h3 i18n>Low Quality Image</h3>
+      <img #lowQualityImage class="thumbnail-image" [src]="getLowQualitySource()" (load)="calculateLowImageSize()">
+      <h5 *ngIf="getLowQualitySource()">{{getLowImageSize()}}</h5>
+      <h5 *ngIf="getLowQualitySource()">{{getLowFileSize()}}</h5>
+    </div>
+
+  </div>
+
+  <button id="load-image-button" type="submit" (click)="uploadImage()" i18n="load image button">Load image from local file</button>
+
+</div>

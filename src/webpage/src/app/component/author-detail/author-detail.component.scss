@@ -1,0 +1,27 @@
+.author{
+  background-color: #202020;
+}
+
+.author-info{
+  display:grid;
+  grid-template: "col1 col2";
+  grid-template-columns: 15% 80%;
+  width: 100%;
+  overflow: hidden;
+  justify-content: center;
+}
+
+#author-image{
+  grid-area: col1;
+  margin: 1em;
+  max-width: 10em;
+}
+
+.author-data{
+  grid-area: col2;
+}
+
+h1{
+  font-size: 30pt;
+  text-align: center;
+}

@@ -1,0 +1,28 @@
+
+<agm-map  [latitude]="map.lat" [longitude]="map.lng" [styles]="map.styles" [zoom]="map.zoom">
+
+  <agm-marker-cluster [minimumClusterSize]="6" imagePath="assets/cluster/m">
+
+    <agm-marker
+      *ngFor="let marker of this.getMarkers()"
+      [latitude]="marker.getLocation().getLatitude()"
+      [longitude]="marker.getLocation().getLongitude()"
+      [iconUrl]="'assets/marker.png'"
+      (mouseOver)="this.markerEnter(marker)"
+      (mouseOut)="this.markerLeave()"
+      (markerClick)="markerClicked(marker.getId())">
+    </agm-marker>
+
+  </agm-marker-cluster>
+
+</agm-map>
+
+<div
+  *ngIf="getCurrentMarker()"
+  class="marker-thumbnail"
+  [style.top.px]="this.getThumbnailHeigth()"
+  [style.left.px]="this.getThumbnailWidth()">
+
+  <img #hoverImage [src]="this.thumbnail()" (load)="onImageLoad($event)">
+
+</div>

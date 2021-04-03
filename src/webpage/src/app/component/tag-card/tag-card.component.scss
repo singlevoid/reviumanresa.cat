@@ -1,0 +1,47 @@
+
+$primaryColor: #976ec5;
+
+
+.card{
+  width: 20rem;
+  height: 32rem;
+  margin: 2em;
+  margin-bottom: 0em;
+  border: 0;
+  padding: 0;
+  background-color: #202020;
+  box-shadow: 0.2em 0.2em 0.5em 0px rgba(0,0,0,0.6);
+  transition: background-color 0.6s;
+}
+
+
+.card:hover{
+  cursor: pointer;
+  background-color: #583c58;
+}
+
+
+.card:hover > .card-img-top{
+  opacity: 0.5;
+}
+
+
+.primary-color{
+  color: #976ec5;
+  transition: color 0.6s;
+}
+
+
+.card:hover .primary-color{
+  color: rgb(224, 224, 224);
+}
+
+
+.card-img-top{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 20rem;
+  object-fit: cover;
+  transition: opacity 0.6s;
+}

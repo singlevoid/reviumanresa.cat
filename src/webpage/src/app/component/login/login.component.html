@@ -1,0 +1,13 @@
+<p>login works!</p>
+
+<div class="login" [formGroup]="getForm()">
+    <form class="input-container" [formGroup]="getForm()">
+      <h3 class="input-container-title">Login</h3>
+      <h5 i18n>Email</h5>
+      <input type="text" formControlName="email" autocomplete="username">
+      <h5 i18n>Password</h5>
+      <input type="password" formControlName="password" autocomplete="current-password">
+
+      <button (click)="signIn()">Login</button>
+    </form>
+</div>

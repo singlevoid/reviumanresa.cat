@@ -1,0 +1,9 @@
+<form class="form" [formGroup]="getForm()">
+
+  <label for="author" i18n>Name</label>
+  <input type="text" id="author" formControlName="name">
+
+  <label for="description" i18n>Description</label>
+  <input type="text" id="description" formControlName="description" minlength="4">
+
+</form>
