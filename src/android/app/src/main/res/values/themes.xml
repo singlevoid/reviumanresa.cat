@@ -1,0 +1,25 @@
+<resources>
+    <style name="Theme.Caterina" parent="Theme.MaterialComponents.Light">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/white</item>
+
+        <item name="colorPrimary">@color/primaryLight</item>
+        <item name="colorPrimaryVariant">@color/primary</item>
+        <item name="android:textColorHighlight">@color/white</item>
+        <item name="colorAccent">@color/primaryLight</item>
+        <item name="colorControlNormal">@color/primaryLight</item>
+
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowBackgroundFallback">@color/grey</item>
+        <item name="android:drawableTint">@color/black</item>
+
+        <item name="android:colorBackgroundFloating">@color/white_transparent</item>
+        <item name="android:colorBackground">#FFFFFF</item>
+        <item name="android:colorEdgeEffect">#C5C5C5</item>
+    </style>
+</resources>

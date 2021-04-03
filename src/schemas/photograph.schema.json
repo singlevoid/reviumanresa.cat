@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Photograph",
+    "description": "A historic photograph data",
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string",
+            "description": "title of the photograph"
+        },
+        "description": {
+            "type": "string",
+            "description": "small description of "
+        },
+        "tags": {
+            "type": "array",
+            "description": "tags for the photograph",
+            "items": {
+                "type": "string"
+            },
+            "uniqueItems": true
+        }
+    }
+  }

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/filter_location_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:windowBackgroundFallback">
+
+    <ImageButton
+        android:id="@+id/filter_location_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/transparent"
+        android:contentDescription="@string/content_description_back"
+        android:tint="?android:textColor"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_location_text_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/filter_location_text_title"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+    <TextView
+        android:id="@+id/filter_location_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/reset"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_location_text_title"
+        app:layout_constraintEnd_toStartOf="@+id/filter_location_close"
+        app:layout_constraintStart_toEndOf="@+id/filter_location_text_title"
+        app:layout_constraintTop_toTopOf="@+id/filter_location_text_title"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/filter_location_text_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/location"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/filter_location_reset"
+        app:layout_constraintStart_toEndOf="@+id/filter_location_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/filter_location_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/content_description_close"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_location_reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/filter_location_reset"
+        app:srcCompat="@drawable/ic_close_black_24dp"
+        app:tint="?android:textColor" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filter_location_mode_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filter_location_text_title">
+
+        <View
+            android:id="@+id/filter_location_divider_top"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="?android:colorEdgeEffect"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/filter_location_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/filter_mode"
+            app:layout_constraintEnd_toEndOf="@+id/filter_location_divider_top"
+            app:layout_constraintStart_toStartOf="@+id/filter_location_divider_top"
+            app:layout_constraintTop_toBottomOf="@+id/filter_location_divider_top" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/filter_location_divider_bottom"
+            app:layout_constraintStart_toStartOf="@+id/filter_location_divider_bottom"
+            app:layout_constraintTop_toBottomOf="@+id/filter_location_mode">
+
+            <com.singlevoid.caterina.ui.filters.FilterModeView
+                android:id="@+id/filter_location_mode_geolocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/filter_location_mode_all"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.singlevoid.caterina.ui.filters.FilterModeView
+                android:id="@+id/filter_location_mode_non_geolocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/filter_location_mode_geolocation"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.singlevoid.caterina.ui.filters.FilterModeView
+                android:id="@+id/filter_location_mode_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/filter_location_divider_bottom"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="?android:colorEdgeEffect"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/filter_location_divider_top"
+            app:layout_constraintStart_toStartOf="@+id/filter_location_divider_top"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filter_location_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filter_location_mode_container">
+
+        <EditText
+            android:id="@+id/filter_location_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:hint="@string/distance_in_meters"
+            android:importantForAutofill="no"
+            android:inputType="numberSigned"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

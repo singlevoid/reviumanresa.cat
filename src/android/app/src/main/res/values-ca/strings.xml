@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Reviu Manresa</string>
+    <string name="empty_title">Títol desconegut</string>
+    <string name="empty_author">Autor desconegut</string>
+    <string name="download">Descarregar</string>
+    <string name="fullscreen">Ampliar Imatge</string>
+    <string name="title_dashboard">Explorar</string>
+    <string name="title_notifications">Fotografies</string>
+    <string name="share">Compartir</string>
+    <string name="content_description_empty_image">Sense descripció de la imatge</string>
+    <string name="empty_source">font desconeguda</string>
+    <string name="empty_date">Data desconeguda</string>
+    <string name="title_home">Al voltant</string>
+    <string name="distance">" %1$d m"</string>
+    <string name="open_browser">Obir al navegador</string>
+    <string name="empty_distance">Distancia desconeguda</string>
+    <string name="explore">Mostrar al mapa</string>
+    <string name="loading_photographs">Carregant fotografies</string>
+    <string name="empty_tag">Etiqueta desconeguda</string>
+    <string name="near_permission">Location permission must be allowed to show you photographs near you</string>
+    <string name="near_empty">No n\'hi han fotografies a menys de %1$d metres de la teva ubicació</string>
+    <string name="title_settings">Configuració</string>
+    <string name="theme_settings">Escollir tema</string>
+    <string name="settings_theme_default">Per defecte del sistema</string>
+    <string name="settings_theme_dark">Fosc</string>
+    <string name="settings_theme_light">Clar</string>
+    <string name="allow">Permetre</string>
+    <string name="apply_filter">Aplicar filtre</string>
+    <string name="filters">Filtres</string>
+    <string name="location">Ubicació</string>
+    <string name="filter_default_geolocalized">Tots</string>
+    <string name="filter_only_geolocalized">Ubicades</string>
+    <string name="filter_only_non_localized">No Ubicades</string>
+    <string name="description_back">Tornar als filtres</string>
+    <string name="sort">Ordenar</string>
+    <string name="tags">Etiquetes</string>
+    <string name="reset">Restableix</string>
+    <string name="authors">Autors</string>
+    <string name="search_hint">Cercar…</string>
+    <string name="filter_mode">Mode</string>
+    <string name="close">Tancar</string>
+
+    <plurals name="location">
+        <item quantity="one">Ubicació</item>
+        <item quantity="other">%d Ubicació</item>
+    </plurals>
+
+    <plurals name="tags">
+        <item quantity="one">Etiquetes</item>
+        <item quantity="other">%d Etiquetes</item>
+    </plurals>
+
+    <plurals name="authors">
+        <item quantity="one">Autors</item>
+        <item quantity="other">%d Autors</item>
+    </plurals>
+    <string name="match_all">Coincideixen tots</string>
+    <string name="match_any">Concideix algun</string>
+    <string name="show_near">Mostrar fotografies a</string>
+    <string name="show_near_me">metres</string>
+    <string name="filter_all">Totes</string>
+    <string name="content_description_close">Tancar</string>
+    <string name="content_description_source">Font de la fotografia</string>
+    <string name="content_description_author">Autor de la fotografia</string>
+    <string name="content_description_date">Data de la fotografia</string>
+    <string name="empty_description">Aquesta imatge no te descripció</string>
+    <string name="content_description_back">Tornar enrere</string>
+    <string name="content_description_share">Compartir fotografia</string>
+    <string name="content_description_download">Descarregar fotografia</string>
+    <string name="content_description_browse">Obrir al navegador</string>
+    <string name="content_description_open_filter">Obrir filtre</string>
+    <string name="content_description_option_status">Estat de l\'opció</string>
+    <string name="content_description_search">Cercar fotografia</string>
+    <string name="content_description_clear_search_bar">Borrar cerca</string>
+    <string name="distance_in_meters">Distancia en metres</string>
+</resources>

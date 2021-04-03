@@ -1,0 +1,157 @@
+[
+    {
+      "stylers": [
+        {
+          "saturation": -80
+        },
+        {
+          "invert_lightness": true
+        },
+        {
+          "lightness": 5
+        }
+      ]
+    },
+    {
+      "featureType": "landscape.man_made",
+      "stylers": [
+        {
+          "color": "#555353"
+        },
+        {
+          "visibility": "on"
+        },
+        {
+          "weight": 4.5
+        }
+      ]
+    },
+    {
+      "featureType": "landscape.man_made",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#e6e6e6"
+        },
+        {
+          "saturation": -45
+        },
+        {
+          "lightness": -25
+        },
+        {
+          "visibility": "simplified"
+        },
+        {
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "featureType": "landscape.man_made",
+      "elementType": "geometry.fill",
+      "stylers": [
+        {
+          "color": "#454545"
+        },
+        {
+          "saturation": -45
+        },
+        {
+          "lightness": -25
+        },
+        {
+          "visibility": "simplified"
+        }
+      ]
+    },
+    {
+      "featureType": "poi",
+      "elementType": "labels",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "poi.park",
+      "elementType": "geometry.fill",
+      "stylers": [
+        {
+          "color": "#061907"
+        }
+      ]
+    },
+    {
+      "featureType": "road.highway",
+      "stylers": [
+        {
+          "weight": "0.49"
+        }
+      ]
+    },
+    {
+      "featureType": "road.highway",
+      "elementType": "labels",
+      "stylers": [
+        {
+          "saturation": "-35"
+        },
+        {
+          "lightness": "-7"
+        },
+        {
+          "visibility": "on"
+        },
+        {
+          "weight": "0.01"
+        }
+      ]
+    },
+    {
+      "featureType": "road.highway",
+      "elementType": "labels.icon",
+      "stylers": [
+        {
+          "visibility": "on"
+        }
+      ]
+    },
+    {
+      "featureType": "road.highway",
+      "elementType": "labels.text",
+      "stylers": [
+        {
+          "visibility": "on"
+        }
+      ]
+    },
+    {
+      "featureType": "road.highway",
+      "elementType": "labels.text.stroke",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "road.local",
+      "elementType": "geometry.fill",
+      "stylers": [
+        {
+          "color": "#000000"
+        }
+      ]
+    },
+    {
+      "featureType": "road.local",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#bababa"
+        }
+      ]
+    }
+  ]
