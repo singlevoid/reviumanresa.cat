@@ -8,7 +8,7 @@
     android:background="?android:windowBackgroundFallback">
 
     <View
-        android:id="@+id/fragment_filters_card_sort_divider4"
+        android:id="@+id/filter_authors_divider_bottom"
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginStart="16dp"
@@ -17,18 +17,18 @@
         android:background="?android:colorEdgeEffect"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/filters_author_mode_container" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
+        android:id="@+id/filters_author_mode_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5">
+        app:layout_constraintTop_toBottomOf="@+id/filter_authors_mode">
 
         <com.singlevoid.caterina.ui.filters.FilterModeView
-            android:id="@+id/filterModeView"
+            android:id="@+id/filter_author_mode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -38,7 +38,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <View
-        android:id="@+id/fragment_filters_card_sort_divider5"
+        android:id="@+id/filter_authors_divider_top"
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginStart="16dp"
@@ -55,25 +55,25 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:background="@color/transparent"
-        android:contentDescription="@string/description_back"
-        app:tint="?android:textColor"
+        android:contentDescription="@string/content_description_back"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_authors_text"
         app:layout_constraintEnd_toStartOf="@+id/filter_authors_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+        app:layout_constraintTop_toTopOf="@+id/filter_authors_text"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+        app:tint="?android:textColor" />
 
     <TextView
         android:id="@+id/filter_authors_reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
         android:contentDescription="@string/reset"
         android:text="@string/reset"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/filter_authors_text"
-        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintEnd_toStartOf="@+id/filter_authors_close"
         app:layout_constraintStart_toEndOf="@+id/filter_authors_text"
         app:layout_constraintTop_toTopOf="@+id/filter_authors_text"
         tools:visibility="visible" />
@@ -102,14 +102,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_filters_card_sort_divider4" />
+        app:layout_constraintTop_toBottomOf="@+id/filter_authors_divider_bottom" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/filter_authors_close"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginEnd="16dp"
-        android:contentDescription="@string/close"
+        android:contentDescription="@string/content_description_close"
         app:layout_constraintBottom_toBottomOf="@+id/filter_authors_reset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/filter_authors_reset"
@@ -117,13 +117,13 @@
         app:tint="?android:textColor" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/filter_authors_mode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/filter_mode"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_filters_card_sort_divider5" />
+        app:layout_constraintTop_toBottomOf="@+id/filter_authors_divider_top" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,6 +19,7 @@ public class FilterModeView extends ConstraintLayout {
     private final Context context;
     private View root;
     private int mode;
+    private boolean isActive = false;
 
 
     public FilterModeView(@NonNull Context context) {
@@ -42,12 +43,14 @@ public class FilterModeView extends ConstraintLayout {
 
 
     public void setActive(){
+        isActive = true;
         getCardView().setCardBackgroundColor(AppUtils.getThemeColor(context, android.R.attr.colorPrimary));
         getTextView().setTextColor(AppUtils.getThemeColor(context, android.R.attr.textColorHighlight));
     }
 
 
     public void setInactive(){
+        isActive = false;
         getCardView().setCardBackgroundColor(AppUtils.getThemeColor(context, android.R.attr.colorBackground));
         getTextView().setTextColor(AppUtils.getThemeColor(context, android.R.attr.textColor));
     }
@@ -76,6 +79,11 @@ public class FilterModeView extends ConstraintLayout {
 
     private ImageView getIconView(){
         return root.findViewById(R.id.filter_base_image_icon);
+    }
+
+
+    public boolean isActive(){
+        return isActive;
     }
 
 }

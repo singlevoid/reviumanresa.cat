@@ -1,78 +1,115 @@
-package com.singlevoid.caterina.data.filters;
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                      LICENSE                                                   //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+// Copyright [2020] [Joan Albert Espinosa Muns]                                                   //
+//                                                                                                //
+// Licensed under the Apache License, Version 2.0 (the "License")                                 //
+// you may not use this file except in compliance with the License.                               //
+// You may obtain a copy of the License at                                                        //
+//                                                                                                //
+// http://www.apache.org/licenses/LICENSE-2.0                                                     //
+//                                                                                                //
+// Unless required by applicable law or agreed to in writing, software                            //
+// distributed under the License is distributed on an "AS IS" BASIS,                              //
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                       //
+// See the License for the specific language governing permissions and                            //
+// limitations under the License.                                                                 //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
-import android.content.Context;
+package com.singlevoid.caterina.data.filters;
 
 import com.singlevoid.caterina.data.photograph.Photograph;
 
 import java.util.ArrayList;
 
-
 public class FilterManager {
 
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                          VARIABLES                                         //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    private final ArrayList<FilterBase> filters = new ArrayList<>();
     private final FilterLocation location;
-    private final FilterSort sort;
     private final FilterTag tag;
     private final FilterAuthor author;
     private final FilterText text;
 
-    public FilterManager(Context context){
-        location = new FilterLocation(context);
-        sort = new FilterSort(context);
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                    CONSTRUCTORS AND OVERRIDES                              //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    public FilterManager(){
+        location = new FilterLocation();
         tag = new FilterTag();
         author = new FilterAuthor();
         text = new FilterText();
+
+        filters.add(location);
+        filters.add(tag);
+        filters.add(author);
+        filters.add(text);
     }
 
-    public FilterLocation getFilterLocation(){ return location;}
-    public FilterSort getSort(){ return sort;}
-    public FilterTag getTag(){ return tag;}
-    public FilterAuthor getAuthor(){ return author;}
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //                             SETTERS AND GETTERS                                            //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-    public FilterText getText() {
+    public FilterLocation getLocationFilter() {
+        return location;
+    }
+
+
+    public FilterTag getTagFilter() {
+        return tag;
+    }
+
+
+    public FilterAuthor getAuthorFilter() {
+        return author;
+    }
+
+
+    public FilterText getTextFilter() {
         return text;
     }
 
-    public boolean isDefault(){
-        if(!getFilterLocation().isDefault()){
-            return false;
+
+    public void setToDefault() {
+        for ( FilterBase filter: filters ) {
+            filter.setToDefault();
         }
-
-        else if(!getTag().isDefault()){
-            return false;
-        }
-
-        else if(!getAuthor().isDefault()){
-            return false;
-        }
-
-        else if(!getText().isDefault()){
-            return false;
-        }
-
-        else{
-            return true;
-        }
-
-    }
-
-    public void setToDefault(){
-        getFilterLocation().setToDefault();
-        getTag().setToDefault();
-        getAuthor().setToDefault();
-        getText().setToDefault();
     }
 
 
-    public ArrayList<Photograph> filter(ArrayList<Photograph> photographs){
-        ArrayList<Photograph> filtered = photographs;
+    public ArrayList<Photograph> filter(ArrayList<Photograph> photographs) {
+        ArrayList<Photograph> filteredPhotographs = photographs;
 
-        filtered = text.filter(filtered);
-        filtered = location.filter(filtered);
-        filtered = tag.filter(filtered);
-        filtered = author.filter(filtered);
-        filtered = sort.filter(filtered);
+        for ( FilterBase filter: filters) {
+            filteredPhotographs = filter.filter(filteredPhotographs);
+        }
 
-        return filtered;
+        return filteredPhotographs;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                   BOOLEANS                                                 //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    public boolean isDefault() {
+        for (FilterBase filter: filters) {
+            if ( !filter.isDefault() ) {
+                return false;
+            }
+        }
+        return true;
     }
 }

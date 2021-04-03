@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:contentDescription="@string/empty_image_description"
+                android:contentDescription="@string/content_description_empty_image"
                 app:layout_constraintBottom_toTopOf="@+id/item_collection_list_item_text_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -81,7 +81,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/item_collection_list_item_text_distance" />
 
             <View
-                android:id="@+id/item_collection_list_item_divider"
+                android:id="@+id/detail_photograph_divider_top"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginStart="16dp"
@@ -103,7 +103,7 @@
                 android:tint="?android:textColor"
                 app:layout_constraintEnd_toStartOf="@+id/item_collection_list_item_button_share"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/item_collection_list_item_divider"
+                app:layout_constraintTop_toBottomOf="@+id/detail_photograph_divider_top"
                 app:srcCompat="@drawable/ic_explore_black_24dp" />
 
             <ImageButton
@@ -116,7 +116,7 @@
                 android:tint="?android:textColor"
                 app:layout_constraintEnd_toStartOf="@+id/item_collection_list_item_button_browser"
                 app:layout_constraintStart_toEndOf="@+id/item_collection_list_item_button_explore"
-                app:layout_constraintTop_toBottomOf="@+id/item_collection_list_item_divider"
+                app:layout_constraintTop_toBottomOf="@+id/detail_photograph_divider_top"
                 app:srcCompat="@drawable/ic_share_black_24dp" />
 
             <ImageButton
@@ -130,7 +130,7 @@
                 android:tint="?android:textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/item_collection_list_item_button_share"
-                app:layout_constraintTop_toBottomOf="@+id/item_collection_list_item_divider"
+                app:layout_constraintTop_toBottomOf="@+id/detail_photograph_divider_top"
                 app:srcCompat="@drawable/ic_open_in_new_black_24dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

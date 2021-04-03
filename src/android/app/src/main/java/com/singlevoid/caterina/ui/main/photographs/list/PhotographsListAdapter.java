@@ -1,3 +1,23 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                      LICENSE                                                   //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+// Copyright [2020] [Joan Albert Espinosa Muns]                                                   //
+//                                                                                                //
+// Licensed under the Apache License, Version 2.0 (the "License")                                 //
+// you may not use this file except in compliance with the License.                               //
+// You may obtain a copy of the License at                                                        //
+//                                                                                                //
+// http://www.apache.org/licenses/LICENSE-2.0                                                     //
+//                                                                                                //
+// Unless required by applicable law or agreed to in writing, software                            //
+// distributed under the License is distributed on an "AS IS" BASIS,                              //
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                       //
+// See the License for the specific language governing permissions and                            //
+// limitations under the License.                                                                 //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 package com.singlevoid.caterina.ui.main.photographs.list;
 
 import android.content.Context;
@@ -21,17 +41,25 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
 public class PhotographsListAdapter extends RecyclerView.Adapter<PhotographListItem>
-implements PhotographManager.LocalizationListener{
+                                    implements PhotographManager.LocalizationListener{
 
 
-    private PhotographListItem item;
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                          VARIABLES                                         //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
     private final FilterManager filters;
     private final PhotographManager dataSet;
     private final Context context;
-    private Photograph photograph;
 
 
-    public PhotographsListAdapter(PhotographManager dataSet, Context context, FilterManager filters) {
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                    CONSTRUCTORS AND OVERRIDES                              //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    public PhotographsListAdapter(@NotNull PhotographManager dataSet, Context context, FilterManager filters) {
         this.dataSet = dataSet;
         this.context = context;
         this.filters = filters;
@@ -63,87 +91,17 @@ implements PhotographManager.LocalizationListener{
 
     @Override
     public void onBindViewHolder(@NotNull PhotographListItem item, final int position) {
-        this.item = item;
-        photograph = getPhotographs().get(position);
-        loadImage();
-        loadTitle();
-        loadDescription();
-        loadDistance();
-        setListeners();
+        item.setPhotograph(context, getPhotographs().get(position) );
     }
 
 
-    private void loadImage(){
-        Glide.with(this.context)
-                .asBitmap()
-                .load(photograph.lowQualityReference())
-                .into(item.getImageView());
-    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //                             SETTERS AND GETTERS                                            //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-    private void loadTitle(){
-        if(photograph.getTitle() != null){
-            item.getTitleView().setText(photograph.getTitle());
-        }
-    }
-
-
-    private void loadDescription(){
-        if(photograph.getDescription() != null){
-            item.getDescriptionView().setText(photograph.getDescription());
-        }
-    }
-
-
-    private void loadDistance(){
-        if(photograph.isLocalized() && photograph.getDistance() <= 5000){
-            item.getDistanceView().setVisibility(View.VISIBLE);
-            item.getExploreButton().setVisibility(View.VISIBLE);
-            item.getDistanceView().setText(context.getResources().getString(R.string.distance,
-                    (int) Math.round(photograph.getDistance())));
-        }
-        else{
-            item.getDistanceView().setVisibility(View.GONE);
-            item.getExploreButton().setVisibility(View.GONE);
-        }
-    }
-
-
-    private ArrayList<Photograph> getPhotographs(){
+    private ArrayList<Photograph> getPhotographs() {
         return filters.filter(dataSet.getAll());
-    }
-
-
-    private void setListeners(){
-        item.getImageView().setOnClickListener(this::openDetail);
-        item.getTitleView().setOnClickListener(this::openDetail);
-        item.getDescriptionView().setOnClickListener(this::openDetail);
-        item.getExploreButton().setOnClickListener(this::showOnMap);
-        item.getShareButton().setOnClickListener(this::sharePhotograph);
-        item.getBrowserButton().setOnClickListener(this::openInBrowser);
-    }
-
-
-    private void openDetail(View view){
-        ((MainActivity) context).openPhotographDetail(photograph);
-    }
-
-
-    private void showOnMap(View view) {
-        Bundle bundle = new Bundle();
-        bundle.putFloat("Latitude", photograph.getLatitude());
-        bundle.putFloat("Longitude", photograph.getLongitude());
-        Navigation.findNavController(view).navigate(R.id.action_navigation_notifications_to_navigation_map, bundle);
-    }
-
-
-    private void sharePhotograph(View view){
-        photograph.SharePhotograph(this.context);
-    }
-
-
-    private void openInBrowser(View view) {
-        photograph.openInBrowser(context);
     }
 }
 

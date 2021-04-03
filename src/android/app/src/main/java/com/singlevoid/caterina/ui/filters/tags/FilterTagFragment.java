@@ -1,3 +1,23 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                      LICENSE                                                   //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+// Copyright [2020] [Joan Albert Espinosa Muns]                                                   //
+//                                                                                                //
+// Licensed under the Apache License, Version 2.0 (the "License")                                 //
+// you may not use this file except in compliance with the License.                               //
+// You may obtain a copy of the License at                                                        //
+//                                                                                                //
+// http://www.apache.org/licenses/LICENSE-2.0                                                     //
+//                                                                                                //
+// Unless required by applicable law or agreed to in writing, software                            //
+// distributed under the License is distributed on an "AS IS" BASIS,                              //
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                       //
+// See the License for the specific language governing permissions and                            //
+// limitations under the License.                                                                 //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 package com.singlevoid.caterina.ui.filters.tags;
 
 import android.os.Bundle;
@@ -28,30 +48,32 @@ import com.singlevoid.caterina.ui.filters.FilterModeView;
 import com.singlevoid.caterina.ui.main.MainActivity;
 import com.singlevoid.caterina.utils.AppUtils;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class FilterTagFragment extends Fragment {
 
 
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                          VARIABLES                                         //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
     private View root;
     private final ArrayList<FilterModeView> filterMode = new ArrayList<>();
-
     private DataViewModel data;
     private FilterManager filters;
 
 
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                    CONSTRUCTORS AND OVERRIDES                              //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         root = inflater.inflate(R.layout.filter_tags, container, false);
-        new GestureDetector(getActivity(),
-                new GestureDetector.SimpleOnGestureListener() {
-
-                    @Override
-                    public boolean onDown(MotionEvent e) {
-                        close(root);
-                        return true;
-                    }
-                });
         return root;
     }
 
@@ -59,18 +81,58 @@ public class FilterTagFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        initValues();
+        init();
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                          INIT                                              //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    private void init() {
+        initViewModel();
+        configureViewModes();
         initRecycler();
         setListeners();
-
-        OnBackPressedCallback callback = new OnBackPressedCallback(true) {
-            @Override
-            public void handleOnBackPressed() {
-                Navigation.findNavController(view).popBackStack(R.id.navigation_filters, true);
-            }
-        };
-        requireActivity().getOnBackPressedDispatcher().addCallback(getViewLifecycleOwner(), callback);
     }
+
+
+    private void initViewModel() {
+        data =  new ViewModelProvider(requireActivity()).get(DataViewModel.class);
+    }
+
+
+    private void configureViewModes() {
+        getMatchAllButton().configureFilterMode(FilterTag.MATCH_ALL, R.string.match_all);
+        getMatchAnyButton().configureFilterMode(FilterTag.MATCH_ANY, R.string.match_any);
+
+        filterMode.add(getMatchAllButton());
+        filterMode.add(getMatchAnyButton());
+    }
+
+
+    private void initRecycler(){
+        getRecycler().setLayoutManager(new StaggeredGridLayoutManager(5,
+                StaggeredGridLayoutManager.HORIZONTAL));
+        getRecycler().setHasFixedSize(false);
+    }
+
+
+    private void setListeners(){
+        data.getFilters().observe(getViewLifecycleOwner(), this::updateFilters);
+        backButton().setOnClickListener(this::backPressed);
+        getResetButton().setOnClickListener(this::resetFilters);
+        getCloseButton().setOnClickListener(this::close);
+
+        getMatchAllButton().setOnClickListener(this::modeClicked);
+        getMatchAnyButton().setOnClickListener(this::modeClicked);
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                          VIEWS                                             //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
     private ImageView getCloseButton(){
@@ -103,37 +165,13 @@ public class FilterTagFragment extends Fragment {
     }
 
 
-    private void initValues(){
-        data =  new ViewModelProvider(requireActivity()).get(DataViewModel.class);
-
-        getMatchAllButton().configureFilterMode(FilterTag.MATCH_ALL, R.string.match_all);
-        getMatchAnyButton().configureFilterMode(FilterTag.MATCH_ANY, R.string.match_any);
-
-        filterMode.add(getMatchAllButton());
-        filterMode.add(getMatchAnyButton());
-    }
-
-
-    private void initRecycler(){
-        getRecycler().setLayoutManager(new StaggeredGridLayoutManager(5,
-                StaggeredGridLayoutManager.HORIZONTAL));
-        getRecycler().setHasFixedSize(false);
-    }
-
-
-    private void setListeners(){
-        data.getFilters(requireContext()).observe(getViewLifecycleOwner(), this::updateFilters);
-        backButton().setOnClickListener(this::backPressed);
-        getResetButton().setOnClickListener(this::resetFilters);
-        getCloseButton().setOnClickListener(this::close);
-
-        getMatchAllButton().setOnClickListener(this::modeClicked);
-        getMatchAnyButton().setOnClickListener(this::modeClicked);
-    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                   METHODS                                                  //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
     private void modeClicked(View view){
-        filters.getTag().setFilterMode(((FilterModeView) view).getFilterMode());
+        filters.getTagFilter().setFilterMode(((FilterModeView) view).getFilterMode());
         updateFiltersMode();
         data.updateFilters(filters);
     }
@@ -141,7 +179,7 @@ public class FilterTagFragment extends Fragment {
 
     private void updateFiltersMode(){
         for(FilterModeView filter: filterMode) {
-            if(filter.getFilterMode() == filters.getTag().getFilterMode()){
+            if(filter.getFilterMode() == filters.getTagFilter().getFilterMode()){
                 filter.setActive();
             }
             else{
@@ -163,7 +201,7 @@ public class FilterTagFragment extends Fragment {
 
 
     private void resetFilters(View view) {
-        filters.getTag().setToDefault();
+        filters.getTagFilter().setToDefault();
         updateFiltersMode();
         data.updateFilters(filters);
     }
@@ -186,16 +224,15 @@ public class FilterTagFragment extends Fragment {
     }
 
 
-    private void loadTags(TagManager tags, FilterManager filters){
-        if(filters.getTag().getOptions().isEmpty()){
-            filters.getTag().setTags(tags.getTags());
+    private void loadTags(TagManager tags, @NotNull FilterManager filters){
+        if(filters.getTagFilter().getOptions().isEmpty()){
+            filters.getTagFilter().setTags(tags.getAllTags());
         }
     }
 
 
     private void updateVisibilityReset(){
-        if(filters.getTag().isDefault())    { getResetButton().setVisibility(View.INVISIBLE); }
-        else                                { getResetButton().setVisibility(View.VISIBLE); }
+        if(filters.getTagFilter().isDefault())    { getResetButton().setVisibility(View.INVISIBLE); }
+        else                                      { getResetButton().setVisibility(View.VISIBLE); }
     }
-
 }

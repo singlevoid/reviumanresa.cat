@@ -7,7 +7,7 @@
     <string name="base_url" translatable="false">http://www.reviumanresa.cat</string>
 
     <string name="empty_title">Unknown Title</string>
-    <string name="empty_image_description">Unknown image description</string>
+    <string name="content_description_empty_image">Unknown image description</string>
     <string name="empty_author">Unknown author</string>
     <string name="empty_source">Unknown source</string>
     <string name="empty_date">Unknown date</string>
@@ -26,11 +26,6 @@
     <string name="download">Download</string>
     <string name="fullscreen">full screen</string>
 
-    <string name="distance_menu">Set distance</string>
-    <string name="distance_menu_50" translatable="false">50 m</string>
-    <string name="distance_menu_100" translatable="false">100 m</string>
-    <string name="distance_menu_150" translatable="false">150 m</string>
-    <string name="distance_menu_200" translatable="false">200 m</string>
 
     <string name="distance"> %1$d m</string>
     <string name="open_browser">Open in browser</string>
@@ -46,8 +41,8 @@
     <string name="filters">Filters</string>
     <string name="location">Location</string>
     <string name="filter_default_geolocalized">All</string>
-    <string name="filter_only_geolocalized">Only localized</string>
-    <string name="filter_only_non_localized">No localized</string>
+    <string name="filter_only_geolocalized">Geolocated</string>
+    <string name="filter_only_non_localized">No Geolocated</string>
     <string name="description_back">Go back to filters</string>
     <string name="sort">Sort</string>
     <string name="tags">Tags</string>
@@ -73,5 +68,22 @@
     </plurals>
     <string name="match_all">Match all</string>
     <string name="match_any">Match any</string>
+    <string name="show_near">Show photographs at</string>
+    <string name="show_near_me">"meters "</string>
+    <string name="filter_all">All</string>
+    <string name="content_description_close">Cose</string>
+    <string name="content_description_source">Source of the photograph</string>
+    <string name="content_description_author">Author of the photograph</string>
+    <string name="content_description_date">Date of the photograph</string>
+    <string name="empty_description">This photograph has no description</string>
+    <string name="content_description_back">Go back</string>
+    <string name="content_description_share">Share photograph</string>
+    <string name="content_description_download">Download photograph</string>
+    <string name="content_description_browse">Open photograph on browser</string>
+    <string name="content_description_open_filter">Open filter</string>
+    <string name="content_description_option_status">Option status</string>
+    <string name="content_description_search">Search photograph</string>
+    <string name="content_description_clear_search_bar">Clear search bar</string>
+    <string name="distance_in_meters">Distance in meters</string>
 
 </resources>

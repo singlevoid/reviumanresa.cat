@@ -2,23 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_photograph_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/DetailToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?android:windowBackground"
-        android:foregroundTint="#151515"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <FrameLayout
-        android:id="@+id/DetailProgress"
+        android:id="@+id/detail_progress_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,11 +16,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detail_progress_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ProgressBar
-                android:id="@+id/progressBar2"
+                android:id="@+id/detail_progress_bar"
                 style="?android:attr/progressBarStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -48,18 +38,19 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DetailToolbar">
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detail_photograph_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <com.github.chrisbanes.photoview.PhotoView
-                android:id="@+id/DetailImage"
+                android:id="@+id/detail_photograph_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/empty_image_description"
+                android:layout_marginTop="46dp"
+                android:contentDescription="@string/content_description_empty_image"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -68,7 +59,7 @@
 
 
             <TextView
-                android:id="@+id/DetailTitleText"
+                android:id="@+id/detail_photograph_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -78,11 +69,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/DetailImage"
+                app:layout_constraintTop_toBottomOf="@+id/detail_photograph_image"
                 tools:text="@string/empty_title" />
 
             <View
-                android:id="@+id/item_collection_list_item_divider"
+                android:id="@+id/detail_photograph_divider_top"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginStart="16dp"
@@ -91,47 +82,49 @@
                 android:background="?android:windowBackgroundFallback"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/DetailTitleText" />
+                app:layout_constraintTop_toBottomOf="@id/detail_photograph_title" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/detail_photograph_title_icon"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:contentDescription="@string/content_description_author"
                 android:foregroundTintMode="multiply"
-                app:layout_constraintEnd_toStartOf="@+id/DetailAuthorText"
+                app:layout_constraintEnd_toStartOf="@+id/detail_photograph_author"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/item_collection_list_item_divider"
+                app:layout_constraintTop_toBottomOf="@+id/detail_photograph_divider_top"
                 app:srcCompat="@drawable/ic_portrait_black_24dp"
                 app:tint="?android:textColor"
                 tools:srcCompat="@drawable/ic_portrait_black_24dp" />
 
             <TextView
-                android:id="@+id/DetailAuthorText"
+                android:id="@+id/detail_photograph_author"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="@string/empty_author"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView2"
-                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+                app:layout_constraintStart_toEndOf="@+id/detail_photograph_title_icon"
+                app:layout_constraintTop_toTopOf="@+id/detail_photograph_title_icon" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/detail_photograph_author_icon"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:contentDescription="@string/content_description_source"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/detail_photograph_title_icon"
                 app:srcCompat="@drawable/ic_source_black_24dp"
                 app:tint="?android:textColor" />
 
             <TextView
-                android:id="@+id/DetailSourceText"
+                android:id="@+id/detail_photograph_source"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -139,23 +132,24 @@
                 android:layout_marginEnd="8dp"
                 android:text="@string/empty_source"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
-                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+                app:layout_constraintStart_toEndOf="@+id/detail_photograph_author_icon"
+                app:layout_constraintTop_toTopOf="@+id/detail_photograph_author_icon" />
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/detail_photograph_date_icon"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                app:layout_constraintEnd_toStartOf="@+id/DetailDateText"
+                android:contentDescription="@string/content_description_date"
+                app:layout_constraintEnd_toStartOf="@+id/detail_photograph_date"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/detail_photograph_author_icon"
                 app:srcCompat="@drawable/ic_today_black_24dp"
                 app:tint="?android:textColor" />
 
             <TextView
-                android:id="@+id/DetailDateText"
+                android:id="@+id/detail_photograph_date"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -163,11 +157,11 @@
                 android:layout_marginEnd="8dp"
                 android:text="@string/empty_date"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView4"
-                app:layout_constraintTop_toTopOf="@+id/imageView4" />
+                app:layout_constraintStart_toEndOf="@+id/detail_photograph_date_icon"
+                app:layout_constraintTop_toTopOf="@+id/detail_photograph_date_icon" />
 
             <View
-                android:id="@+id/dividerView2"
+                android:id="@+id/detail_photograph_divider_middle"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginStart="16dp"
@@ -176,23 +170,23 @@
                 android:background="?android:windowBackgroundFallback"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+                app:layout_constraintTop_toBottomOf="@+id/detail_photograph_date_icon" />
 
             <TextView
-                android:id="@+id/DetailDescriptionText"
+                android:id="@+id/detail_photograph_description"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:text="TextView"
+                android:text="@string/empty_description"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dividerView2" />
+                app:layout_constraintTop_toBottomOf="@id/detail_photograph_divider_middle" />
 
             <View
-                android:id="@+id/dividerView3"
+                android:id="@+id/detail_photograph_divider_bottom"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginStart="16dp"
@@ -201,10 +195,10 @@
                 android:background="?android:windowBackgroundFallback"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/DetailDescriptionText" />
+                app:layout_constraintTop_toBottomOf="@id/detail_photograph_description" />
 
             <GridView
-                android:id="@+id/DetailTagView"
+                android:id="@+id/detail_photograph_tag_container"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
@@ -212,10 +206,83 @@
                 android:numColumns="3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dividerView3" />
+                app:layout_constraintTop_toBottomOf="@id/detail_photograph_divider_bottom" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/detail_photograph_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detail_photograph_action_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:colorBackgroundFloating">
+
+            <ImageView
+                android:id="@+id/detail_photograph_action_bar_home"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/content_description_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+                app:tint="?android:textColor" />
+
+            <ImageView
+                android:id="@+id/detail_photograph_action_bar_share"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/content_description_share"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/detail_photograph_action_bar_download"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_share_black_24dp"
+                app:tint="?android:textColor" />
+
+            <ImageView
+                android:id="@+id/detail_photograph_action_bar_download"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/content_description_download"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/detail_photograph_action_bar_browser"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_get_app_black_24dp"
+                app:tint="?android:textColor" />
+
+            <ImageView
+                android:id="@+id/detail_photograph_action_bar_browser"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/content_description_browse"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_open_in_new_black_24dp"
+                app:tint="?android:textColor" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

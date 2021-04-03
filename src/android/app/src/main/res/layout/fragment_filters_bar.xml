@@ -8,11 +8,12 @@
     android:background="?android:windowBackground">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/filters_bar_search_icon"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:background="?android:windowBackground"
+        android:contentDescription="@string/content_description_search"
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintEnd_toStartOf="@+id/cardView"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,14 +30,14 @@
         app:cardCornerRadius="4dp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toStartOf="@+id/fragment_filters_bar_image_filters"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/filters_bar_search_icon"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:focusable="true"
-            android:focusableInTouchMode="true"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
 
             <FrameLayout
                 android:layout_width="0dp"
@@ -59,7 +60,8 @@
                     android:inputType="textPersonName"
                     android:padding="4sp"
                     android:textColor="?android:textColor"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:importantForAutofill="no" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -70,6 +72,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/content_description_clear_search_bar"
                         android:visibility="gone"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -91,6 +94,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:background="?android:windowBackground"
+        android:contentDescription="@string/content_description_open_filter"
         android:tint="?android:drawableTint"
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,13 +102,34 @@
         app:layout_constraintTop_toTopOf="@+id/cardView"
         app:srcCompat="@drawable/ic_more_vert_black_24dp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fragment_filters_bar_recycler"
-        android:layout_width="0dp"
+    <HorizontalScrollView
+        android:id="@+id/filters_bar_fillters_container"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.singlevoid.caterina.ui.filters.bar.items.FilterBarItemCollectionView
+                android:id="@+id/fragment_filters_bar_collection_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.singlevoid.caterina.ui.filters.bar.items.FilterBarItemLocationView
+                android:id="@+id/fragment_filters_bar_location_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.singlevoid.caterina.ui.filters.bar.items.FilterBarItemAuthorView
+                android:id="@+id/fragment_filters_bar_author_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

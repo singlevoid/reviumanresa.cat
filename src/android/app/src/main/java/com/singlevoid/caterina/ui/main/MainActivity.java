@@ -1,3 +1,23 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                      LICENSE                                                   //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+// Copyright [2020] [Joan Albert Espinosa Muns]                                                   //
+//                                                                                                //
+// Licensed under the Apache License, Version 2.0 (the "License")                                 //
+// you may not use this file except in compliance with the License.                               //
+// You may obtain a copy of the License at                                                        //
+//                                                                                                //
+// http://www.apache.org/licenses/LICENSE-2.0                                                     //
+//                                                                                                //
+// Unless required by applicable law or agreed to in writing, software                            //
+// distributed under the License is distributed on an "AS IS" BASIS,                              //
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                       //
+// See the License for the specific language governing permissions and                            //
+// limitations under the License.                                                                 //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 package com.singlevoid.caterina.ui.main;
 
 import android.content.Intent;
@@ -17,12 +37,14 @@ import com.singlevoid.caterina.R;
 import com.singlevoid.caterina.data.photograph.Photograph;
 import com.singlevoid.caterina.ui.photograph.PhotographDetailActivity;
 
-import java.util.Objects;
+import org.jetbrains.annotations.NotNull;
 
 public class MainActivity extends AppCompatActivity {
 
 
-    private NavController navController;
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                    CONSTRUCTORS AND OVERRIDES                              //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
     @Override
@@ -31,27 +53,59 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         loadNavigation();
-        ifNotSavedInstanceGoToMap(savedInstanceState);
+
+        if (savedInstanceState == null){
+            getNavController().navigate(R.id.navigation_map);
+        }
+
     }
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //                             SETTERS AND GETTERS                                            //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    private BottomNavigationView getBottomNavigationView(){
+        return findViewById(R.id.activity_main_nav_view);
+    }
+
+
+    private NavHostFragment getHostFragment(){
+        return (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.activity_main_host_fragment);
+    }
+
+
+    @NotNull
+    private NavController getNavController() {
+        return getHostFragment().getNavController();
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //                                   METHODS                                                  //
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
     private void loadNavigation(){
-        BottomNavigationView navView = findViewById(R.id.activty_main_nav_view);
-        navView.setOnNavigationItemReselectedListener(item -> { });
+        getBottomNavigationView().setOnNavigationItemReselectedListener(item -> { });
 
         new AppBarConfiguration.Builder(R.id.navigation_home,
                 R.id.navigation_map,
                 R.id.navigation_collection).build();
 
-        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.activity_main_host_fragment);
-        navController = Objects.requireNonNull(navHostFragment).getNavController();
-        NavigationUI.setupWithNavController(navView, navController);
-    }
-
-
-    private void ifNotSavedInstanceGoToMap(Bundle savedInstanceState) {
-        if (savedInstanceState == null) {
-            navController.navigate(R.id.navigation_map);
-        }
+        NavigationUI.setupWithNavController(getBottomNavigationView(), getNavController());
     }
 
 
@@ -63,21 +117,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
-
-
     public void filterNavigateTo(View container, Integer id){
+        super.onPostResume();
         NavController navController = Navigation.findNavController(container);
         navController.navigate(id);
         super.onPostResume();
-    }
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
     }
 }
