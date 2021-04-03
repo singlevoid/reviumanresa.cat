@@ -1,15 +1,14 @@
 div#footer{
-  display: grid;
-  grid-template-columns: 15% 22% 22% 22% 15%;
-  grid-template-areas: ". app repo license .";
-  background-color: #101010;
-  padding-top: 5em;
-  padding-bottom: 4em
+  padding: 1em;
 }
 
 div#footer h5{
   text-transform: uppercase;
   text-align: center;
+}
+
+#footer .col-sm{
+  padding: 2em;
 }
 
 div#footer p{
