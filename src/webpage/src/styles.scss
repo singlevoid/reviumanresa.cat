@@ -5,6 +5,11 @@ $background-color: #101010;
   src: url(assets/font/LT-Feelgood.ttf) format('truetype');
 }
 
+
+html{
+  scroll-behavior: smooth;
+}
+
 button{
   background-color: #6936a3;
   padding: 0.6em;
