@@ -65,8 +65,16 @@ export class RangedDate{
   }
 
   public toJSON(): object{
-    return {start: this.getStart(),
-            end: this.getEnd()}
+
+    var data = {}
+
+    if ( this.getStart() ) { data["start"] = this.getStart(); }
+    if (this.getEnd() )    { data["end"] = this.getEnd() }
+
+
+    if (Object.keys(data).length === 0) { return null }
+
+    return data;
   }
 
 }

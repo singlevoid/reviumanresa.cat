@@ -44,10 +44,16 @@ export class ObjectDate{
   }
 
   public toJSON(): object{
-    return {year: this.getYear().toJSON(),
-            month: this.getMonth().toJSON(),
-            day: this.getDay().toJSON(),
-    }
+
+    var data = {}
+
+    if ( this.getYear().toJSON() )  { data["year"] =  this.getYear().toJSON() }
+    if ( this.getMonth().toJSON() ) { data["month"] = this.getMonth().toJSON() }
+    if ( this.getDay().toJSON() )   { data["day"] = this.getDay().toJSON() }
+
+    if (Object.keys(data).length === 0) { return null }
+
+    return data;
   }
 
 }

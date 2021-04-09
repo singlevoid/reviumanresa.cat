@@ -1,10 +1,8 @@
-import { TOUCH_BUFFER_MS } from '@angular/cdk/a11y';
-import { typeWithParameters } from '@angular/compiler/src/render3/util';
+
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { timer } from 'rxjs';
 import { Author } from 'src/app/model/author';
 import { MapLocation } from 'src/app/model/map-location';
 import { Photograph } from 'src/app/model/photograph';
@@ -12,7 +10,6 @@ import { Source } from 'src/app/model/source';
 import { Tag } from 'src/app/model/tag';
 import { DataService } from 'src/app/service/data.service';
 import { environment } from 'src/environments/environment';
-import { TagFormComponent } from '../admin-tag/tag-form.component';
 import { BasicFormComponent } from '../basic-form/basic-form.component';
 import { DateFormComponent } from '../date-form/date-form.component';
 import { UploadImageComponent } from '../upload-image/upload-image.component';

@@ -1,61 +1,165 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="ba121e95bc7a1dd9602ea201a2f6ffeff8d0ed0b" datatype="html">
         <source>The Images of Manresa in your hand</source>
-        <target>Las Imágenes de Manresa en tu mano</target>
+        <target state="translated">Las Imágenes de Manresa en tu mano</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/home/home.component.html</context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="107e4689b6cc0aeee8bbd9cc7cce9f8f1f22bd46" datatype="html">
-        <source>Download the free app for Android and come alive again the moments that shaped Manresa. Explore the city and it&apos;s history, See the moments that are near you and find all the stories.</source>
-        <target>Descarga la aplicación gratuita para Android y vuelve a vivir los momentos que dieron forma a Manresa. Explore la ciudad y su historia, vea los momentos que están cerca de usted y encuentre todas las historias</target>
+      <trans-unit id="13618fb58f07dab473ff59808057f58e5d6be486" datatype="html">
+        <source>Download the free app for Android and come alive again the moments that shaped Manresa. Explore the city and it's history and see all the moments and stories that are near you that shaped the city.</source>
+        <target state="translated">Descarga la aplicación gratuita para Android y vuelve a vivir los momentos que dieron forma a Manresa. Explore la ciudad y su historia, vea los momentos que están cerca de usted y encuentre todas las historias</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/home/home.component.html</context>
           <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="f823529193a3e101a94f0d6918ee56d3c487f38d" datatype="html">
+        <source>Near</source>
+        <target state="translated">Alrededor</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/home/home.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/home/home.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8b1f578113c2aef26241b0b39f901a52eb30ae27" datatype="html">
+        <source>Find the nearest photographs around you while walking the city</source>
+        <target state="translated">Encuentra las fotografías más cercanas a tu alrededor mientras caminas por la ciudad.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/home/home.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1773b1dad3e4b72bca77621985366b9e6a92ae28" datatype="html">
+        <source>Explore</source>
+        <target state="translated">Explorar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/home/home.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/home/home.component.html</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="05cdaec28584e3fdbb7c916b27d2b9ca5eeb5c37" datatype="html">
+        <source>Explore the city map and discover all the stories</source>
+        <target state="translated">Explora el mapa de la ciudad y descubre todas las historias.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/home/home.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7e892ba15f2c6c17e83510e273b3e10fc32ea016" datatype="html">
+        <source>Search</source>
+        <target state="translated">Buscar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/home/home.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/home/home.component.html</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cab584bfecd1bf38981298e3c7fadc1ae919827a" datatype="html">
+        <source>Use the filters and search for specific locations, authors, collections and more</source>
+        <target state="translated">Utilice los filtros y busque ubicaciones, autores, colecciones específicas y más</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/home/home.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="537abc76a7915a6603db11fae4cd79de90013185" datatype="html">
+        <source>Manresa has an ancient, diverse and relevant heritage: the medieval walls and churches, the Baroque buildings and the factories and houses of modernist style, the sculptures, the facades of the streets and the squares of the Historic Center. It also has a rich intangible heritage that includes all those festive, musical, traditional and popular manifestations.</source>
+        <target state="translated">Manresa tiene un patrimonio antiguo, diverso y relevante: las murallas e iglesias medievales, los edificios barrocos y las fábricas y casas de estilo modernista, las esculturas, las fachadas de las calles y las plazas del Centro Histórico. También cuenta con un rico patrimonio inmaterial que incluye todas aquellas manifestaciones festivas, musicales, tradicionales y populares.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/home/home.component.html</context>
+          <context context-type="linenumber">67,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="346ab53bed4f187abfe2d6c8802ee35fa957c59e" datatype="html">
+        <source>Set a distance in meters from you and have a window to all the photographs and stories that happenned around your location while traveling and visiting the city.</source>
+        <target state="translated">Establezca una distancia en metros de usted y tenga una ventana a todas las fotografías e historias que sucedieron alrededor de su ubicación mientras viajaba y visitaba la ciudad.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/home/home.component.html</context>
+          <context context-type="linenumber">71,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8e628ce7910951f0328f20a8dfc737728212787f" datatype="html">
+        <source>Many stories happened in the streets and squares of Manresa, explore the map and its recesses and find all the photographs that have been geolocated.</source>
+        <target state="translated">Establezca una distancia desde su ubicación y tenga una ventana a todas las fotos e historias que sucedieron alrededor suyo mientras viaja y visitaba la ciudad.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/home/home.component.html</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="adaafb269738738f1ca8c73f8cb6ca476aa99688" datatype="html">
         <source>Get the app</source>
-        <target>Descárgate la App</target>
+        <target state="translated">Obtener la aplicación</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/footer/footer.component.html</context>
-          <context context-type="linenumber">3</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="749788ff1ce28f82ebff27fc28458f95a122a42a" datatype="html">
         <source>Download the free app for Android and come alive again the moments that shaped Manresa. </source>
-        <target>Descarga la aplicación gratuita para Android y vuelve a vivir los momentos que dieron forma a Manresa.</target>
+        <target state="translated">Descarga la aplicación gratuita para Android y vuelve a vivir los momentos que dieron forma a Manresa.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/footer/footer.component.html</context>
-          <context context-type="linenumber">4</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ebc1c2623f53ce48c714e00161a2f31f732c815b" datatype="html">
+        <source>Open Source</source>
+        <target state="translated">Fuente abierta</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/footer/footer.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9cb339f98f17d884ba2b8f798072d758e73914a4" datatype="html">
+        <source>This project is open source under <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.apache.org/licenses/LICENSE-2.0&quot;>"/>Apache License 2.0<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>. You can check the source code on Github.</source>
+        <target state="translated">Este proyecto es de código abierto bajo <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://www.apache.org/licenses/LICENSE-2.0&quot;>"/> Apache License 2.0 <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>. Puede consultar el código fuente en Github.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/footer/footer.component.html</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="92eee6be6de0b11c924e3ab27db30257159c0a7c" datatype="html">
         <source>Home</source>
-        <target>Inicio</target>
+        <target state="translated">Inicio</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/menu/menu.component.html</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d2a2915d79ff31439a174fc3a147004542291e29" datatype="html">
         <source>Map</source>
-        <target>Mapa</target>
+        <target state="translated">Mapa</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/menu/menu.component.html</context>
-          <context context-type="linenumber">38</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-admin/photograph-admin.component.html</context>
+          <context context-type="linenumber">77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="0af1538b04a61b9693f7c787fc9281bdb9ef47fa" datatype="html">
         <source>Photographs</source>
-        <target>Fotografías</target>
+        <target state="translated">Fotografías</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/menu/menu.component.html</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">44</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/author-detail/author-detail.component.html</context>
@@ -64,63 +168,115 @@
       </trans-unit>
       <trans-unit id="d14d93e7ed17daa7a6b4238a3413056df11e1acb" datatype="html">
         <source>Collections</source>
-        <target>Colecciones</target>
+        <target state="translated">Colecciones</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/menu/menu.component.html</context>
-          <context context-type="linenumber">46</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-admin/photograph-admin.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="415f73cbdba5d09762df6c89878273c3aa6da51e" datatype="html">
+        <source>Authors</source>
+        <target state="translated">Autores</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/menu/menu.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="408cb6073e60c5d966296a3207fc596adca75e01" datatype="html">
+        <source>Admin</source>
+        <target state="translated">Admin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/menu/menu.component.html</context>
+          <context context-type="linenumber">56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2d030866819ebcfb842d514ea23e9356338f2bd8" datatype="html">
         <source>This image may be subject to Copyright</source>
-        <target>Esta imagen puede estar sujeta a derechos de autor</target>
+        <target state="translated">Esta imagen puede estar sujeta a derechos de autor</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/photograph-detail/photograph-detail.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d900b850cc6584818f8d7a1f279fbe6a9963eba6" datatype="html">
         <source>Unknown author</source>
-        <target>Autor desconocido</target>
+        <target state="translated">Autor desconocido</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/photograph-detail/photograph-detail.component.html</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="93b94ee26cbb49892ad01f226af5f1cba03f76ee" datatype="html">
         <source>Unknown date</source>
-        <target>Fecha desconocida</target>
+        <target state="translated">Fecha desconocida</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/photograph-detail/photograph-detail.component.html</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c49fbb7384a766a728beb26068c1aae2f1f6c442" datatype="html">
+        <source>Unknown source</source>
+        <target state="translated">Fuente desconocida</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-detail/photograph-detail.component.html</context>
+          <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4b3972c3e9485218508a95f7a4ce7758e3f09ced" datatype="html">
         <source>Upload</source>
-        <target>Subir</target>
+        <target state="translated">Subir</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/admin-tag/admin-tag.component.html</context>
           <context context-type="linenumber">16</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-admin/photograph-admin.component.html</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="cff1428d10d59d14e45edec3c735a27b5482db59" datatype="html">
         <source>Name</source>
-        <target>Nombre</target>
+        <target state="translated">Nombre</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/admin-tag/tag-form.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/basic-form/basic-form.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="eec715de352a6b114713b30b640d319fa78207a0" datatype="html">
         <source>Description</source>
-        <target>Descripcion</target>
+        <target state="translated">Descripción</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/admin-tag/tag-form.component.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-admin/photograph-admin.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/basic-form/basic-form.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d23bf9634c7c4e7ef6726349cf59e08b95852cdb" datatype="html">
+        <source>Show more photographs<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;material-icons align-middle&quot;>"/>keyboard_arrow_down<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source>
+        <target state="translated">Mostrar más fotografías <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;material-icons align-middle&quot;>"/>keyboard_arrow_down<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-masonry/photograph-masonry.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="8483c321e3561f453d14b07f6d6e68201360fc10" datatype="html">
         <source>Author:<x id="INTERPOLATION" equiv-text="{{getAuthor()}}"/></source>
-        <target>Autor:<x id="INTERPOLATION" equiv-text="{{getAuthor()}}"/></target>
+        <target state="translated">Autor: <x id="INTERPOLATION" equiv-text="{{getAuthor()}}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/photograph-card/photograph-card.component.html</context>
           <context context-type="linenumber">30</context>
@@ -128,7 +284,7 @@
       </trans-unit>
       <trans-unit id="00cf3d5ae5ae1b4969579deb6c62b5f54cbcea11" datatype="html">
         <source>Load image from local file</source>
-        <target>Cargar imagen desde archivo local</target>
+        <target state="translated">Cargar imagen desde archivo local</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/upload-image/upload-image.component.html</context>
           <context context-type="linenumber">21</context>
@@ -137,7 +293,6 @@
       </trans-unit>
       <trans-unit id="efabb19a601b1ff202865b84268d94cf915ccebf" datatype="html">
         <source>High Quality Image</source>
-        <target>Imagen de alta calidad</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/upload-image/upload-image.component.html</context>
           <context context-type="linenumber">6</context>
@@ -145,7 +300,6 @@
       </trans-unit>
       <trans-unit id="71c359e69298c128ba46357f81448d49db0dd047" datatype="html">
         <source>Low Quality Image</source>
-        <target>Imagen de baja calidad</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/upload-image/upload-image.component.html</context>
           <context context-type="linenumber">13</context>
@@ -153,10 +307,361 @@
       </trans-unit>
       <trans-unit id="968ae420637cbca0cdd4b2a8aea0fc6a2fcd275f" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{getNumberOfPhotographs()}}"/> photographs</source>
-        <target><x id="INTERPOLATION" equiv-text="{{getNumberOfPhotographs()}}"/> Fotografías</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/tag-card/tag-card.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/tag-detail/tag-detail.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/author-card/author-card.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="526558a48fda4af0f4c9a35cfc03208ffc73bdf4" datatype="html">
+        <source>Photograph</source>
+        <target state="translated">Fotografía</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-admin/photograph-admin.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2f933b826a570836cab04f683970a2d22068458c" datatype="html">
+        <source>Date</source>
+        <target state="translated">Fecha</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-admin/photograph-admin.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f6e04edea3bb3a59d5904725bfbc2c440e793001" datatype="html">
+        <source>Year</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-admin/photograph-admin.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5bb4a09a669f55893c9a37a8480c8fa3f7ce5702" datatype="html">
+        <source>Month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-admin/photograph-admin.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="efffb64bda94fa4f4493322c5e3717e845d5dc30" datatype="html">
+        <source>Day</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-admin/photograph-admin.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d7293b61e9088c66421df2e367e0ccc00346cf9f" datatype="html">
+        <source>Author</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-admin/photograph-admin.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e5d8bb389c702588877f039d72178f219453a72d" datatype="html">
+        <source>Unknown</source>
+        <target state="translated">Desconocida</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-admin/photograph-admin.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-admin/photograph-admin.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6834fa6b43d1ecbdf147c48dd9c4d72f1484571d" datatype="html">
+        <source>Source</source>
+        <target state="translated">Fotografía</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/photograph-admin/photograph-admin.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3de5734fab50c00dc40827879e074632d773fd60" datatype="html">
+        <source>Is exact</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/date-form/date-form.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b68ce78c3f2c548391d812c248217f8a212491e1" datatype="html">
+        <source>End</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/date-form/date-form.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8434d4a28744d7df82cd39ef8da4266fcbc40064" datatype="html">
+        <source>Start</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/date-form/date-form.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="244aae9346da82b0922506c2d2581373a15641cc" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/login/login.component.html</context>
           <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c32ef07f8803a223a83ed17024b38e8d82292407" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/login/login.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.alert.close" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/alert/alert.ts</context>
+          <context context-type="linenumber">58,61</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/alert/alert.ts</context>
+          <context context-type="linenumber">72,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.slide-number" datatype="html">
+        <source> Slide <x id="INTERPOLATION" equiv-text="ate _pauseOnHov"/> of <x id="INTERPOLATION_1" equiv-text="ect(false);   p"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/carousel/carousel.ts</context>
+          <context context-type="linenumber">114,118</context>
+        </context-group>
+        <note priority="1" from="description">Currently selected slide number read by screen reader</note>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.previous" datatype="html">
+        <source>Previous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/carousel/carousel.ts</context>
+          <context context-type="linenumber">132,134</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.next" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/carousel/carousel.ts</context>
+          <context context-type="linenumber">147,151</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.previous-month" datatype="html">
+        <source>Previous month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">24,27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.next-month" datatype="html">
+        <source>Next month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">44,48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">57,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-month" datatype="html">
+        <source>Select month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">44,49</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-year" datatype="html">
+        <source>Select year</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">59,64</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first" datatype="html">
+        <source>««</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">147,148</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous" datatype="html">
+        <source>«</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">153,154</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next" datatype="html">
+        <source>»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">158,159</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last" datatype="html">
+        <source>»»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">164,165</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first-aria" datatype="html">
+        <source>First</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">168,172</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous-aria" datatype="html">
+        <source>Previous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">176,177</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next-aria" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">188,189</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last-aria" datatype="html">
+        <source>Last</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">195,200</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.progressbar.value" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="turn this._max;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/progressbar/progressbar.ts</context>
+          <context context-type="linenumber">31,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.HH" datatype="html">
+        <source>HH</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.hours" datatype="html">
+        <source>Hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.MM" datatype="html">
+        <source>MM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.minutes" datatype="html">
+        <source>Minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
+        <source>Increment hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
+        <source>Decrement hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
+        <source>Increment minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
+        <source>Decrement minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.SS" datatype="html">
+        <source>SS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">85,87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.seconds" datatype="html">
+        <source>Seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">90,92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
+        <source>Increment seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
+        <source>Decrement seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">105,109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.PM" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="sible.    */   "/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">125,130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.AM" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="Step: number;  "/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">116,123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.toast.close-aria" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/toast/toast.ts</context>
+          <context context-type="linenumber">78,85</context>
         </context-group>
       </trans-unit>
     </body>

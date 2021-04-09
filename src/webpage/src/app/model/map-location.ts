@@ -45,8 +45,15 @@ export class MapLocation{
   }
 
   public toJSON(): object{
-    return {lat: this.getLatitude(),
-            lng: this.getLongitude()}
+
+    var data = {}
+
+    if ( this.getLongitude() ) { data["lat"] = this.getLatitude() }
+    if ( this.getLongitude() ) { data["lng"] = this.getLongitude() }
+
+    if (Object.keys(data).length === 0) { return null }
+
+    return data;
   }
 
 }

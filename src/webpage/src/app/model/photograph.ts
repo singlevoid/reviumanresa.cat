@@ -162,14 +162,19 @@ export class Photograph {
 
 
   public JSON(): object{
-    return {title: this.getTitle(),
-            description: this.getDescription(),
-            date: this.getDate().toJSON(),
-            location: this.getLocation().toJSON(),
-            license: this.getLicense(),
-            tags: this.getTags(),
-            source: this.getSource(),
-            author: this.getAuthor()}
+
+    var data = {}
+    if ( this.getTitle() )              { data["title"] = this.getTitle() }
+    if ( this.getDescription() )        { data["description"] = this.getDescription() }
+    if ( this.getDate().toJSON() )      { data["date"] = this.getDate().toJSON() }
+    if ( this.getLocation().toJSON() )  { data["location"] = this.getLocation().toJSON() }
+    if ( this.getLicense() )            { data["license"] = this.getLicense() }
+    if ( this.getTags() )               { data["tags"] = this.getTags() }
+    if ( this.getSource() )             { data["source"] = this.getSource() }
+    if ( this.getAuthor() )             { data["author"] = this.getAuthor() }
+
+    return data;
+
   }
 
 

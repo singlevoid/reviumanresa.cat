@@ -68,9 +68,14 @@ export class Tag{
 
 
   public JSON(): any{
-    return {name: this.name,
-            description: this.description,
-            location: {lat: this.location.getLatitude(), lng: this.location.getLongitude() }}
+
+    var data =  {};
+
+    if ( this.getName() )                 { data["name"] = this.getName() }
+    if ( this.getDescription() )          { data["description"] = this.getDescription() }
+    if ( this.getLocation().toJSON() )    { data["location"] = this.getLocation().toJSON(); }
+    return data;
+
   }
 
 
