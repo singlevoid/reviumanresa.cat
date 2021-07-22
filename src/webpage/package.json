@@ -31,6 +31,7 @@
     "bootstrap": "^4.6.0",
     "firebase": "^8.3.3",
     "masonry-layout": "^4.2.2",
+    "module-alias": "^2.2.2",
     "ngx-image-compress": "^11.0.3",
     "ngx-masonry": "^11.0.0",
     "rxjs": "^6.6.7",
@@ -39,8 +40,8 @@
   },
   "devDependencies": {
     "@angular-devkit/architect": "^0.1102.8",
-    "@angular-devkit/build-angular": "~0.1100.3",
-    "@angular/cli": "~11.0.3",
+    "@angular-devkit/build-angular": "~0.1102.8",
+    "@angular/cli": "~11.2.8",
     "@angular/compiler-cli": "~11.2.9",
     "@angular/localize": "^11.2.9",
     "@types/jasmine": "^3.6.9",
@@ -61,6 +62,6 @@
     "protractor": "~7.0.0",
     "ts-node": "^9.1.1",
     "tslint": "~6.1.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.1.5"
   }
 }

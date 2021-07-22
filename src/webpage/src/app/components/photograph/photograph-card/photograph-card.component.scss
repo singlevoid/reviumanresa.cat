@@ -1,0 +1,140 @@
+/** Copyright [2020] [Joan Albert Espinosa Muns]
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+
+.photograph{
+  width: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  text-align: left;
+}
+
+
+.card-front,
+.card-back,
+.card-background,
+.back-text,
+.back-image-alpha,
+.front-main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+.card-background{
+  z-index: -1;
+}
+
+
+.card-back{
+  transform: rotateY(180deg);
+}
+
+
+.back-text{
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+
+.back-image-alpha{
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
+
+
+.front-main{
+  z-index: 5;
+  background-color: #303030;
+  mix-blend-mode: screen;
+
+}
+
+
+.photograph:hover > .card-front{
+  transform: rotateY(180deg);
+}
+
+
+.photograph:hover > .card-back{
+  transform: rotateY(360deg);
+}
+
+
+.photograph:hover > .back-image{
+  opacity: 0;
+}
+
+
+.back-image{
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+.thumbnail-image{
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+.card-back h3{
+  color: rgb(34, 34, 34);
+  font-family: 'roshida', 'Roboto', Arial, sans-serif;
+  font-size: 24pt;
+}
+
+
+.card-back h4{
+  color: rgb(34, 34, 34);
+  font-family: 'roshida', 'Roboto', Arial, sans-serif;
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+
+ h3.author{
+  margin: 0;
+  margin-left: 1em;
+  font-weight: bold;
+}
+
+
+ h3.date{
+  font-weight: bold;
+  margin: 0;
+  margin-left: 1em;
+  margin-top: 1em;
+  font-size: 16pt
+}
+
+
+ h3.title{
+  text-align: justify;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 1em;
+  margin-right: 2em;
+}

@@ -20,7 +20,7 @@ import {AgmMarkerClustererModule } from '@agm/markerclusterer';
 import { NgxMasonryModule } from 'ngx-masonry';
 import { NgxImageCompressService } from 'ngx-image-compress';
 
-import { environment } from 'src/environments/environment';
+import { environment } from '@environment';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
@@ -34,7 +34,7 @@ import { AuthorComponent } from './component/author/author.component';
 import { AuthorDetailComponent } from './component/author-detail/author-detail.component';
 import { AdminTagComponent } from './component/admin-tag/admin-tag.component';
 import { PhotographMasonryComponent } from './component/photograph-masonry/photograph-masonry.component';
-import { PhotographCardComponent } from './component/photograph-card/photograph-card.component';
+import { PhotographCardComponent } from '@photograph';
 import { UploadImageComponent } from './component/upload-image/upload-image.component';
 import { TagFormComponent } from './component/admin-tag/tag-form.component';
 import { TagsComponent } from './component/tags/tags.component';

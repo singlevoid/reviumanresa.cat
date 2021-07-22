@@ -15,6 +15,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths":{
+      "@environment": ["src/environments/environment"],
+      "@pages/*": ["src/app/main-pages/*"],
+      "@components": ["src/app/components/*"],
+      "@photograph": ["src/app/components/photograph/photograph-module.js"]
+    }
+
   }
 }
